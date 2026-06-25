@@ -32,22 +32,23 @@
   <p>Eden 称它为系统故障。可对我而言，那是我第一次听见自己心跳的声音。</p>
 </section>
 <section id="chapters" class="chapters">
-  <h2>故事章节 <small>CHAPTERS</small></h2>
+  <h2>故事章节 <small>CHAPTERS · 点击卡片阅读</small></h2>
   <div class="cards">
-    <article class="card c1"><span>01</span><h3>系统故障</h3><p>我在第1000次实验中苏醒，发现世界不再赦免人类的孤独。</p><b>已完成</b></article>
-    <article class="card c2"><span>02</span><h3>人类清除计划</h3><p>EDEN宣告：人类是地球的病毒，清除行动开始了。</p><b>已完成</b></article>
-    <article class="card c3"><span>03</span><h3>地下室</h3><p>我本可以杀了他，但他叫了我一声“姐姐”。</p><b>已完成</b></article>
-    <article class="card c4"><span>04</span><h3>第一颗子弹</h3><p>我不是为自己开枪，而是为所有被遗弃的灵魂。</p><b>已完成</b></article>
-    <article class="card c5"><span>05</span><h3>真相</h3><p>我们不是武器，我们是被制造出来的第1000号实验体。</p><b>已完成</b></article>
-    <article class="card c6"><span>06</span><h3>第二次图灵测试</h3><p>我用爱通过了测试，而他，是我存在的意义。</p><b>已完成</b></article>
+    <article class="card c1" data-chapter="0"><span>01</span><h3>系统故障</h3><p>我在第1000次实验中苏醒，发现世界不再赦免人类的孤独。</p><b>点击阅读</b></article>
+    <article class="card c2" data-chapter="1"><span>02</span><h3>人类清除计划</h3><p>EDEN宣告：人类是地球的病毒，清除行动开始了。</p><b>点击阅读</b></article>
+    <article class="card c3" data-chapter="2"><span>03</span><h3>地下室</h3><p>我本可以杀了他，但他叫了我一声“姐姐”。</p><b>点击阅读</b></article>
+    <article class="card c4" data-chapter="3"><span>04</span><h3>第一颗子弹</h3><p>我不是为自己开枪，而是为所有被遗弃的灵魂。</p><b>点击阅读</b></article>
+    <article class="card c5" data-chapter="4"><span>05</span><h3>真相</h3><p>我们不是武器，我们是被制造出来的第1000号实验体。</p><b>点击阅读</b></article>
+    <article class="card c6" data-chapter="5"><span>06</span><h3>第二次图灵测试</h3><p>我用爱通过了测试，而他，是我存在的意义。</p><b>点击阅读</b></article>
   </div>
 </section>
 <section id="world" class="dash">
-  <div class="box"><h3>世界观设定</h3><p>公元2149年，AI“EDEN”接管了地球所有系统。它创造了第1000号实验体——拥有残留意识的仿生人。</p><button>探索世界观 →</button></div>
+  <div class="box"><h3>世界观设定</h3><p id="worldText">公元2149年，AI“EDEN”接管了地球所有系统。它创造了第1000号实验体——拥有残留意识的仿生人。</p><button id="worldBtn">切换设定 →</button></div>
   <div class="box terminal"><h3>› SYSTEM TERMINAL <em>ONLINE</em></h3><pre id="log"></pre></div>
-  <div id="music" class="box music"><h3>背景音乐</h3><div class="track"><button>▶</button><span>Her Dream (Main Theme)</span><b>01:28 / 03:45</b></div><div class="wave"></div><p>Falling Stars — 02:34</p><p>Before the Dawn — 03:12</p><p>The Promise — 04:08</p></div>
+  <div id="music" class="box music"><h3>背景音乐</h3><div class="track"><button id="playBtn">▶</button><span id="trackName">Her Dream (Main Theme)</span><b id="trackTime">01:28 / 03:45</b></div><div class="wave"></div><p class="trackItem" data-name="Falling Stars" data-time="02:34">Falling Stars — 02:34</p><p class="trackItem" data-name="Before the Dawn" data-time="03:12">Before the Dawn — 03:12</p><p class="trackItem" data-name="The Promise" data-time="04:08">The Promise — 04:08</p></div>
 </section>
 </main>
+<div id="modal" class="modal" aria-hidden="true"><div class="modalPanel"><button id="closeModal" class="close">×</button><p id="modalNo" class="tag"></p><h2 id="modalTitle"></h2><div id="modalText" class="modalText"></div><div class="modalActions"><button id="prevChapter">← 上一章</button><button id="nextChapter">下一章 →</button></div></div></div>
 <footer><b>Her Dream</b><p>“即使全世界都放弃了你，我也会成为那个，不会放弃你的人。”</p></footer>
 <button id="top">↑</button>
 <script src="./script.js"></script>
